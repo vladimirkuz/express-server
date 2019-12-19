@@ -1,6 +1,7 @@
 const sqlite3 = require('sqlite3');
 const db = new sqlite3.Database('./gold_medals.sqlite');
 const fs = require('fs'); // Node.js file system module allows you to work with the file system on your computer
+const {createCountryTable, createGoldMedalTable} = require('./sql');
 
 db.serialize(() => {
   // Drop the tables if they exist

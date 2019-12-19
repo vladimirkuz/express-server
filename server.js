@@ -1,6 +1,6 @@
 const express = require('express');
 const parse = require('csv-parse'); // Parse CSV files
-const fs = require('fs'); // Node.js file system module allows you to work with the file system on your computer
+
 const sqlite3 = require('sqlite3');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -18,7 +18,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 //Create database
-const db = new sqlite3.Database('./gold_medals.sqlite');
+
 
 const lowerCaseObjectKeys = (questionableKeys) => { // Make properties lowercase. For example: questionableKeys = {Country: Afghanistan, Code: AFG, Population: 32526562}
 
